@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "725552501029",
+    "project_id": "lexilearn-ac903",
+    "storage_bucket": "lexilearn-ac903.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:725552501029:android:cfef38cfb381806db1cacc",
+        "android_client_info": {
+          "package_name": "com.example.lexilearn"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsjbp-KXavs-pv7jyQbsUSpwgzu1qTYvc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
