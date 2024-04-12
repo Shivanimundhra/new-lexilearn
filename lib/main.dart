@@ -43,6 +43,7 @@ import 'Level2 Pages/Level3 Pages/6.dart';
 import 'languages/french/level1/screen3.dart';
 import 'languages/french/level1/screen7.dart';
 import 'languages/french/level4/1.dart';
+import 'languages/french/level5/2.dart';
 
 
 void main() async {
@@ -97,8 +98,8 @@ class _MyAppState extends State<MyApp> {
       //   SixPage(),
       //SevenPage(),
       //   Six3Page(),
-       Home()
-       // En5pg1()
+      // Home()
+        En5pg2()
         //En2pg8()
      //   En2pg6()
         // T_active(),

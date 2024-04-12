@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_tts/flutter_tts.dart';
+import 'package:lexilearn/complete.dart';
 import 'package:lexilearn/src/activity/level1/five.dart';
 import 'package:lexilearn/src/activity/level1/secand_activity.dart';
 import 'package:lexilearn/src/home/home.dart';
@@ -27,7 +28,7 @@ class _four_activityState extends State<En5pg2> {
   final SpeechToText speechtotext = SpeechToText();
   var islisting = false;
   var texttospech="click on mic to test";
-  var text="bye see you";
+  var text="have a tea";
   var ans;
 
   speak() async {
@@ -327,7 +328,7 @@ class _four_activityState extends State<En5pg2> {
                                                           this.context,
                                                           MaterialPageRoute(
                                                               builder: (context) =>
-                                                                  Home()));
+                                                                  complete()));
                                                     },
                                                     style: ElevatedButton.styleFrom(
                                                       padding: const EdgeInsets.all(15.0),
