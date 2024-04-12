@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lexilearn/Level2%20Pages/Level3%20Pages/1.dart';
+import 'package:lexilearn/languages/french/level4/1.dart';
+import 'package:lexilearn/languages/french/level5/1.dart';
 
 import 'package:lexilearn/src/activity/session1/screen1.dart';
 import 'package:lexilearn/src/home/home.dart';
@@ -310,18 +312,21 @@ class _levelsState extends State<levels> {
                 value: 0.5,
                 strokeWidth: 60,
               ),
-              CircleAvatar(
-                backgroundColor: Colors.grey[100],
-                radius: 40,
-              ),
-              CircleAvatar(
-                radius: 25,
-                backgroundColor: Colors.white,
-                child: Image.asset(
-                  'assets/image/home_image/start.jpg',
-                  height: 55,
-                ),
-              )
+              GestureDetector(onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => En4p1()));
+              },
+                  child: CircleAvatar(
+                    radius: 25,
+                    backgroundColor: Colors.white,
+                    child: Center(
+                      child: Image.asset(
+                        'assets/image/home_image/start.jpg',
+                        height: 55,
+                      ),
+                    ),
+                  )),
             ],
           ),
           Stack(
@@ -360,18 +365,21 @@ class _levelsState extends State<levels> {
                 value: 0.5,
                 strokeWidth: 60,
               ),
-              CircleAvatar(
-                backgroundColor: Colors.grey[100],
-                radius: 40,
-              ),
-              CircleAvatar(
-                radius: 25,
-                backgroundColor: Colors.white,
-                child: Image.asset(
-                  'assets/image/home_image/start.jpg',
-                  height: 55,
-                ),
-              )
+              GestureDetector(onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => En5pg1()));
+              },
+                  child: CircleAvatar(
+                    radius: 25,
+                    backgroundColor: Colors.white,
+                    child: Center(
+                      child: Image.asset(
+                        'assets/image/home_image/start.jpg',
+                        height: 55,
+                      ),
+                    ),
+                  )),
             ],
           ),
           Stack(

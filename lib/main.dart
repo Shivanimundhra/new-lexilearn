@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:lexilearn/firebase_options.dart';
 import 'package:lexilearn/languages/french/level1/screen1.dart';
 import 'package:lexilearn/languages/french/level1/screen8.dart';
+import 'package:lexilearn/languages/french/level5/1.dart';
 import 'package:lexilearn/questions/questions.dart';
 import 'package:lexilearn/src/Login_register/forget_password_phone.dart';
 import 'package:lexilearn/src/Login_register/login.dart';
@@ -36,9 +37,12 @@ import 'package:lexilearn/src/splash_screen/splash.dart';
 import 'package:lexilearn/src/streak/streak.dart';
 
 import 'Level2 Pages/5.dart';
+import 'Level2 Pages/7.dart';
 import 'Level2 Pages/Level3 Pages/4.dart';
+import 'Level2 Pages/Level3 Pages/6.dart';
 import 'languages/french/level1/screen3.dart';
 import 'languages/french/level1/screen7.dart';
+import 'languages/french/level4/1.dart';
 
 
 void main() async {
@@ -93,8 +97,9 @@ class _MyAppState extends State<MyApp> {
       //   SixPage(),
       //SevenPage(),
       //   Six3Page(),
-      //  Home()
-        En3p4()
+       Home()
+       // En5pg1()
+        //En2pg8()
      //   En2pg6()
         // T_active(),
        // adminscreen(),
