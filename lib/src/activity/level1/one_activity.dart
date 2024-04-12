@@ -11,16 +11,16 @@ import 'package:flutter_tts/flutter_tts.dart';
 
 import '../session1/screen1.dart';
 
-class SecondPage1 extends StatefulWidget {
-  const SecondPage1({super.key});
+class SecondPage extends StatefulWidget {
+  const SecondPage({super.key});
 
   @override
-  State<SecondPage1> createState() => _SecondPageState1();
+  State<SecondPage> createState() => _SecondPageState1();
 }
 
 double _initial = 0.0;
 
-class _SecondPageState1 extends State<SecondPage1> {
+class _SecondPageState1 extends State<SecondPage> {
   final FlutterTts flutterTts = FlutterTts();
   final TextEditingController textEditingController = TextEditingController();
 
@@ -554,7 +554,7 @@ class _SecondPageState1 extends State<SecondPage1> {
                                             this.context,
                                             MaterialPageRoute(
                                               builder: (context) =>
-                                              const SecondPage1(),
+                                              const SecondPage(),
                                             ),
                                           );
                                         },

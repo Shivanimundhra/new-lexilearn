@@ -35,6 +35,7 @@ import 'package:lexilearn/src/spainish/level1/spain_one.dart';
 import 'package:lexilearn/src/splash_screen/splash.dart';
 import 'package:lexilearn/src/streak/streak.dart';
 
+import 'Level2 Pages/5.dart';
 import 'languages/french/level1/screen3.dart';
 import 'languages/french/level1/screen7.dart';
 
@@ -91,7 +92,8 @@ class _MyAppState extends State<MyApp> {
       //   SixPage(),
       //SevenPage(),
       //   Six3Page(),
-        Home()
+      //  Home()
+        En2pg6()
         // T_active(),
        // adminscreen(),
       //Sp_four(),

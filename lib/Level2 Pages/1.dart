@@ -1,98 +1,81 @@
+import 'dart:collection';
+
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_tts/flutter_tts.dart';
-import 'package:lexilearn/src/activity/level1/five.dart';
 import 'package:lexilearn/src/activity/level1/secand_activity.dart';
-import 'package:percent_indicator/linear_percent_indicator.dart';
-import 'package:speech_to_text/speech_to_text.dart';
+import 'package:lexilearn/src/activity/session1/screenthird9.dart';
+import 'package:lexilearn/src/home/home.dart';
+import 'package:percent_indicator/percent_indicator.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 
-import '../src/home/home.dart';
-import '5.dart';
+import '2.dart';
+
+//import '../profile/profile.dart';
 
 
-
-double _initial = 0.8;
-
-class En2pg5 extends StatefulWidget {
-  const En2pg5({super.key});
+class En2pg3 extends StatefulWidget {
+  const En2pg3({super.key});
 
   @override
-  State<En2pg5> createState() => _four_activityState();
+  State<En2pg3> createState() => _SixPageState();
 }
 
-class _four_activityState extends State<En2pg5> {
+double _initial = 0.0;
+
+class _SixPageState extends State<En2pg3> {
   final FlutterTts flutterTts = FlutterTts();
   final TextEditingController textEditingController = TextEditingController();
-  final SpeechToText speechtotext = SpeechToText();
-  var islisting = false;
-  var texttospech="click on mic to test";
-  var text="bye see you";
-  var ans;
 
-  speak() async {
+  speak_Apple() async {
     await flutterTts.setLanguage("en-US");
     await flutterTts.setPitch(1);
-    await flutterTts.speak("bye see you");
+    await flutterTts.speak("good morning");
   }
 
-  speak_one() async {
-    await flutterTts.setLanguage("en-US");
-    await flutterTts.setPitch(1);
-    await flutterTts.speak("bye");
-  }
-
-  speak_two() async {
-    await flutterTts.setLanguage("en-US");
-    await flutterTts.setPitch(1);
-    await flutterTts.speak("see");
-  }
-  speak_three() async {
-    await flutterTts.setLanguage("en-US");
-    await flutterTts.setPitch(1);
-    await flutterTts.speak("you");
-  }
-
+  // speak_one() async {
+  //   await flutterTts.setLanguage("en-US");
+  //   await flutterTts.setPitch(1);
+  //   await flutterTts.speak("This");
+  // }
+  //
+  // speak_two() async {
+  //   await flutterTts.setLanguage("en-US");
+  //   await flutterTts.setPitch(1);
+  //   await flutterTts.speak("is a");
+  // }
+  //
   // speak_three() async {
   //   await flutterTts.setLanguage("en-US");
   //   await flutterTts.setPitch(1);
-  //   await flutterTts.speak("Good");
-  // }
-  // speak_four() async {
-  //   await flutterTts.setLanguage("en-US");
-  //   await flutterTts.setPitch(1);
-  //   await flutterTts.speak("Day");
+  //   await flutterTts.speak("Apple");
   // }
 
-  void checkMic() async {
-    bool micAvailable = await speechtotext.initialize();
-
-    if (micAvailable) {
-      print("MicroPhone Available");
-    } else {
-      print("User Denied the use of speech micro");
-    }
-  }
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-  }
+  Color boxcolor = Colors.white60;
+  Color boxcolor1 = Colors.white60;
+  Color boxcolor2 = Colors.white60;
+  Color boxcolor3 = Colors.white60;
+  late int ans;
 
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
+    bool? isapple = false;
+
     return SafeArea(
         child: Scaffold(
-            body: SingleChildScrollView(
-              child: Column(
+          backgroundColor: Color(0xFFE6F5EC),
+          body: SingleChildScrollView(
+            child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   const SizedBox(
                     height: 10.0,
                   ),
 
+                  const SizedBox(
+                    height: 10.0,
+                  ),
                   Column(
                     children: [
                       Row(
@@ -122,7 +105,7 @@ class _four_activityState extends State<En2pg5> {
                             width: 15,
                           ),
                           const Text(
-                            "2/5",
+                            "1/5",
                             style:
                             TextStyle(fontSize: 20.0, fontWeight: FontWeight.w700),
                           )
@@ -132,12 +115,12 @@ class _four_activityState extends State<En2pg5> {
                   ),
 
                   const SizedBox(
-                    height: 30.0,
+                    height: 10.0,
                   ),
                   Container(
                     margin: EdgeInsets.only(right: 150),
                     child: const Text(
-                      "सही उच्चारण करे",
+                      "सही अनुवाद चुनेंं",
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 25.0,
@@ -146,9 +129,6 @@ class _four_activityState extends State<En2pg5> {
                   ),
                   const SizedBox(
                     height: 20.0,
-                  ),
-                  const SizedBox(
-                    height: 30.0,
                   ),
                   Column(
                     children: [
@@ -159,7 +139,7 @@ class _four_activityState extends State<En2pg5> {
                           ),
                           FloatingActionButton.small(
                               onPressed: () {
-                                speak();
+                                speak_Apple();
                               },
                               child: const Icon(Icons.volume_up)),
                           const SizedBox(
@@ -167,110 +147,152 @@ class _four_activityState extends State<En2pg5> {
                           ),
                           TextButton(
                             onPressed: () {
-                              speak_one();
+                              //speak_Apple();
                             },
-                            child: const Tooltip(
-                              message: 'उसकी',
-                              triggerMode: TooltipTriggerMode.longPress,
-                              child: Text(
-                                "Bye",
-                                style: TextStyle(
-                                    fontSize: 25.0,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black),
-                              ),
+                            child: Text(
+                              "Good Morning",
+                              style: TextStyle(
+                                  fontSize: 25.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black),
                             ),
                           ),
-                          // const Text("This",
-                          //     style: TextStyle(
-                          //         fontSize: 25.0, fontWeight: FontWeight.bold))),
-                          TextButton(
-                            onPressed: () {
-                              speak_two();
-                            },
-                            child: const Tooltip(
-                              message: 'गाड़ी',
-                              triggerMode: TooltipTriggerMode.longPress,
-                              child: Text(
-                                "See",
-                                style: TextStyle(
-                                    fontSize: 25.0,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black),
-                              ),
-                            ),
-                          ),
-                          TextButton(
-                            onPressed: () {
-                              speak_three();
-                            },
-                            child: const Tooltip(
-                              message: 'गाड़ी',
-                              triggerMode: TooltipTriggerMode.longPress,
-                              child: Text(
-                                "You",
-                                style: TextStyle(
-                                    fontSize: 25.0,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black),
-                              ),
-                            ),
-                          ),
-
                         ],
                       ),
+                    ],
+                  ),
+                  const SizedBox(
+                    height:100.0,
+                  ),
+                  Column(
+                    children: [
 
-
-                      SizedBox(
-                        height: 150.0,
+                      GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            boxcolor = Colors.greenAccent;
+                            boxcolor1 = Colors.white60;
+                            boxcolor2 = Colors.white60;
+                            boxcolor3 = Colors.white60;
+                            ans=0;
+                          });
+                        },
+                        child: Container(
+                          height: size.height * 0.1/1.5,
+                          width: size.width*0.9,
+                          decoration: BoxDecoration(
+                            color: boxcolor,
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                          child: Center(
+                              child: Text(
+                                "शुभ रात्रि ",
+                                style: TextStyle(
+                                    fontSize: 20.0, fontWeight: FontWeight.bold),
+                              )),
+                        ),
                       ),
+                      SizedBox(height: 30.0,),
+                      GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            boxcolor = Colors.white60;
+                            boxcolor1 = Colors.greenAccent;
+                            boxcolor2 = Colors.white60;
+                            boxcolor3 = Colors.white60;
+                            ans=1;
+
+                          });
+
+                        },
+                        child: Container(
+                          height: size.height * 0.1/1.5,
+                          width: size.width*0.9,
+                          decoration: BoxDecoration(
+                            color: boxcolor1,
+                            borderRadius: BorderRadius.circular(20.0),
+                          ),
+                          child: Center(
+                              child: Text(
+                                "शुभ प्रभात",
+                                style: TextStyle(
+                                    fontSize: 20.0, fontWeight: FontWeight.bold),
+                              )),
+                        ),
+
+                      ),
+                      SizedBox(height: 30.0,),
                       Column(
                         children: [
-                          Text(texttospech,style: TextStyle(fontSize: 20.0),),
-                          Container(
-                            height: 100,
-                            width: 100,
-                            child: GestureDetector(
-                                onTap: () async {
-                                  if (!islisting) {
-                                    bool micAvailable = await speechtotext.initialize();
-                                    if (micAvailable) {
-                                      setState(() {
-                                        islisting = true;
-                                      });
-                                      speechtotext.listen(
-                                          listenFor: Duration(seconds: 20),
-                                          onResult: (result){
-                                            setState(() {
-                                              texttospech=result.recognizedWords;
-                                            });
+                          GestureDetector(
+                            onTap: () {
+                              setState(() {
+                                boxcolor = Colors.white60;
+                                boxcolor1 = Colors.white60;
+                                boxcolor2 = Colors.greenAccent;
+                                boxcolor3 = Colors.white60;
+                                ans=2;
 
-                                          }
-                                      );
-                                    }
-                                  } else {
-                                    setState(() {
-                                      islisting=false;
-                                      speechtotext.stop();
-                                    });
-                                  }
-                                },
+                              });
+                            },
+                            child: Container(
+                              height: size.height * 0.1/1.5,
+                              width: size.width*0.9,
+                              decoration: BoxDecoration(
+                                color: boxcolor2,
+                                borderRadius: BorderRadius.circular(20.0),
+                              ),
+                              child: Center(
+                                  child: Text(
+                                    "धन्यवाद",
+                                    style: TextStyle(
+                                        fontSize: 20.0, fontWeight: FontWeight.bold),
+                                  )),
+                            ),
+                          ),
+                          SizedBox(height: 30.0,),
+                          GestureDetector(
+                            onTap: () {
+                              setState(() {
+                                boxcolor = Colors.white60;
+                                boxcolor1 = Colors.white60;
+                                boxcolor2 = Colors.white60;
+                                boxcolor3 = Colors.greenAccent;
+                                ans=4;
+
+                              });
+
+                            },
+                            child: Container(
+                              height: size.height * 0.1/1.5,
+                              width: size.width*0.9,
+                              decoration: BoxDecoration(
+                                color:boxcolor3,
+                                borderRadius: BorderRadius.circular(20.0),
+                              ),
+                              child: Center(
+                                  child: Text(
+                                    "क्षमा मांगना",
+                                    style: TextStyle(
+                                        fontSize: 20.0, fontWeight: FontWeight.bold),
+                                  )),
+                            ),
 
 
-                                child: CircleAvatar(
-                                  child:islisting ?Icon (Icons.record_voice_over_rounded): Icon(Icons.mic),
-                                )),
-                          )
+                          ),
+
                         ],
                       ),
-                      SizedBox(height: 100,),
+                      const SizedBox(
+                        height: 90.0,
+                      ),
                       Column(
                         children: [
                           SizedBox(
                             width: size.width * 0.9,
                             child: ElevatedButton(
                               onPressed: () {
-                                if (_initial != 1 && text==texttospech ) {
+                                if (_initial != 1 && ans == 1) {
                                   setState(() {
                                     _initial = _initial + 0.2;
                                   });
@@ -298,7 +320,7 @@ class _four_activityState extends State<En2pg5> {
                                                 width: 25.0,
                                               ),
                                               Text(
-                                                "Greate Job ",
+                                                "Grate Job ",
                                                 style: TextStyle(
                                                     fontSize: 25.0,
                                                     fontWeight: FontWeight.bold,
@@ -327,7 +349,7 @@ class _four_activityState extends State<En2pg5> {
                                                           this.context,
                                                           MaterialPageRoute(
                                                               builder: (context) =>
-                                                                  En2pg6()));
+                                                                  En2pg1()));
                                                     },
                                                     style: ElevatedButton.styleFrom(
                                                       padding: const EdgeInsets.all(15.0),
@@ -348,7 +370,7 @@ class _four_activityState extends State<En2pg5> {
                                       //color:Colors.white60,
                                     ),
                                   );
-                                } else if (_initial == 1 || text!=texttospech) {
+                                } else if (_initial == 1 || ans != 3) {
                                   setState(() {
                                     _initial = 0.0;
                                   });
@@ -386,8 +408,7 @@ class _four_activityState extends State<En2pg5> {
                                                 width: 40.0,
                                               ),
                                               Icon(
-                                                Icons
-                                                    .sentiment_very_dissatisfied_outlined,
+                                                Icons.sentiment_very_dissatisfied_outlined,
                                                 size: 35,
                                                 color: Colors.red,
                                               ),
@@ -425,7 +446,7 @@ class _four_activityState extends State<En2pg5> {
                                                   this.context,
                                                   MaterialPageRoute(
                                                     builder: (context) =>
-                                                    const En2pg5(),
+                                                    const En2pg3(),
                                                   ),
                                                 );
                                               },
@@ -442,7 +463,7 @@ class _four_activityState extends State<En2pg5> {
                                 }
                               },
                               style: ElevatedButton.styleFrom(
-                                padding: const EdgeInsets.all(15.0),
+                                padding: const EdgeInsets.all(10.0),
                                 backgroundColor: Colors.black,
                                 shadowColor: Colors.grey,
                               ),
@@ -456,9 +477,16 @@ class _four_activityState extends State<En2pg5> {
                       )
                     ],
                   ),
-                ],
-              ),
-            )));
+                ]),
+            //Center(
+            //   child: Text('Hello',style: TextStyle(
+            //     color: Colors.amber,
+            //     fontSize: 45,
+            //   ),),
+            // ),
+          ),
+        )
+    );
   }
 }
 

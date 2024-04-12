@@ -688,7 +688,7 @@ class _SecondPageState extends State<Second_activity> {
                                       this.context,
                                       MaterialPageRoute(
                                         builder: (context) =>
-                                        const SecondPage1(),
+                                        const SecondPage(),
                                       ),
                                     );
                                   }, child: const Text("Retry",style: TextStyle(fontSize: 20.0,color: Colors.red),))

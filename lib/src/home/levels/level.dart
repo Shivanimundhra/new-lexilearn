@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+
 import 'package:lexilearn/src/activity/session1/screen1.dart';
 import 'package:lexilearn/src/home/home.dart';
 import 'package:lexilearn/src/home/language.dart';
 //import 'package:lexilearnn/screens/second.dart';
 
-import '../../../LEVELS/Level2.dart';
+
+
+import '../../../Level2 Pages/1.dart';
 import '../../activity/level1/one_activity.dart';
 import '../../streak/streak.dart';
 
@@ -144,7 +147,7 @@ class _levelsState extends State<levels> {
             GestureDetector(onTap: () {
               Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const SecondPage1()));
+                  MaterialPageRoute(builder: (context) => const SecondPage()));
             },
                 child: CircleAvatar(
                   radius: 25,
@@ -200,7 +203,7 @@ class _levelsState extends State<levels> {
               ),GestureDetector(onTap: () {
                 Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const Eng2p1()));
+                    MaterialPageRoute(builder: (context) => const En2pg3()));
               },
                   child: CircleAvatar(
                     radius: 25,
