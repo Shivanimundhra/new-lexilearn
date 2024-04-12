@@ -36,31 +36,32 @@ class LanguageList extends StatelessWidget {
   late int languagenumber4 ;
   late int languagenumber5 ;
   String searchString = 'English';
-  String searchString1 = 'Spanish';
-  String searchString2 = 'Hindi';
+  String searchString1 = 'Japan';
+  String searchString2 = 'Spanish';
   String searchString3 = 'French';
   String searchString4 = 'Russian';
   String searchString5 = 'German';
 
   final List<String> languages = [
     'English',
+    'German',
     'Spanish',
-    'Hindi',
     'French',
     'Russian',
-    'German',
+    'Japan',
 
 
   ];
 
   final List<String> leadingImages = [
     'assets/image/language/usaflag.png',
-
+    'assets/image/language/german.png',
+    'assets/image/language/frensh.png',
     'assets/image/language/spain.jpg',
     'assets/image/language/india.jpg',
-    'assets/image/language/frensh.png',
+
     'assets/image/language/russia.png',
-    'assets/image/language/german.png',
+
 
 
   ];

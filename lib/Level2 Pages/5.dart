@@ -9,6 +9,8 @@ import 'package:percent_indicator/percent_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 
+import '6.dart';
+
 
 
 class En2pg6 extends StatefulWidget {
@@ -457,7 +459,7 @@ class _SecondPageState1 extends State<En2pg6> {
                                                     this.context,
                                                     MaterialPageRoute(
                                                         builder: (context) =>
-                                                            En2pg6()));
+                                                            En2pg7()));
                                               },
                                               style: ElevatedButton.styleFrom(
                                                 padding: const EdgeInsets.all(15.0),

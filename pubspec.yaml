@@ -51,6 +51,7 @@ dependencies:
   fluttertoast: ^8.2.4
   email_auth: ^1.1.1
   google_sign_in: ^6.2.1
+  font_awesome_flutter: ^9.1.0
   shared_preferences: ^2.2.2
   word_search_safety: ^0.1.2-nullsafety.1
   firebase_database: ^10.4.11
@@ -120,3 +121,5 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+
