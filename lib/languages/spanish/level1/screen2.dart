@@ -2,8 +2,9 @@ import 'dart:collection';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
-import 'package:lexilearn/languages/french/level1/screen7.dart';
-import 'package:lexilearn/languages/french/level1/screen9.dart';
+import 'package:lexilearn/languages/french/level1/screen3.dart';
+import 'package:lexilearn/languages/spanish/level1/screen1.dart';
+import 'package:lexilearn/languages/spanish/level1/screen3.dart';
 import 'package:lexilearn/src/activity/level1/secand_activity.dart';
 import 'package:lexilearn/src/activity/session1/screen2.dart';
 import 'package:lexilearn/src/home/home.dart';
@@ -11,25 +12,25 @@ import 'package:percent_indicator/percent_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 
-// import '../level1/six.dart';
 
-class Frpg8 extends StatefulWidget {
-  const Frpg8({super.key});
+
+class Sppg2 extends StatefulWidget {
+  const Sppg2({super.key});
 
   @override
-  State<Frpg8> createState() => _SecondPageState();
+  _SecondPageState1 createState() => _SecondPageState1();
 }
 
 double _initial = 0.0;
 
-class _SecondPageState extends State<Frpg8> {
+class _SecondPageState1 extends State<Sppg2> {
   final FlutterTts flutterTts = FlutterTts();
   final TextEditingController textEditingController = TextEditingController();
 
   speak() async {
-    await flutterTts.setLanguage("fr-be");
+    await flutterTts.setLanguage("en-US");
     await flutterTts.setPitch(1);
-    await flutterTts.speak("Maison");
+    await flutterTts.speak("House");
   }
 
   // speak_one() async {
@@ -88,7 +89,7 @@ class _SecondPageState extends State<Frpg8> {
                             Navigator.push(
                                 this.context,
                                 MaterialPageRoute(
-                                    builder: (context) => const Home()));
+                                    builder: (context) => const SpPg1()));
                           },
                           icon: const Icon(
                             Icons.arrow_back,
@@ -118,10 +119,10 @@ class _SecondPageState extends State<Frpg8> {
                 Container(
                   margin: EdgeInsets.only(right: 150),
                   child: const Text(
-                    "Choose the correct picture",
+                    "Choose the picture",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 25.0,
+                        fontSize: 22.0,
                         fontStyle: FontStyle.normal),
                   ),
                 ),
@@ -149,10 +150,10 @@ class _SecondPageState extends State<Frpg8> {
                             speak();
                           },
                           child: const Tooltip(
-                            message: 'House',
+                            message: 'घर',
                             triggerMode: TooltipTriggerMode.longPress,
                             child: Text(
-                              "Maison",
+                              "House",
                               style: TextStyle(
                                   fontSize: 25.0,
                                   fontWeight: FontWeight.bold,
@@ -202,7 +203,7 @@ class _SecondPageState extends State<Frpg8> {
                                 ),
                                 SizedBox(height: 10), // Added SizedBox for spacing
                                 Text(
-                                  "House",
+                                  "maison",
                                   style: TextStyle(
                                     color: Colors.black, // Customize text color as needed
                                     fontSize: 16, // Customize text size as needed
@@ -249,7 +250,7 @@ class _SecondPageState extends State<Frpg8> {
                                 ),
                                 SizedBox(height: 10), // Added SizedBox for spacing
                                 Text(
-                                  "Boy",
+                                  "garçon",
                                   style: TextStyle(
                                     color: Colors.black, // Customize text color as needed
                                     fontSize: 16, // Customize text size as needed
@@ -300,7 +301,7 @@ class _SecondPageState extends State<Frpg8> {
                                     ),
                                     SizedBox(height: 10), // Added SizedBox for spacing
                                     Text(
-                                      "car",
+                                      "voiture",
                                       style: TextStyle(
                                         color: Colors.black, // Customize text color as needed
                                         fontSize: 16, // Customize text size as needed
@@ -342,7 +343,7 @@ class _SecondPageState extends State<Frpg8> {
                                     ),
                                     SizedBox(height: 10), // Added SizedBox for spacing
                                     Text(
-                                      "Tree",
+                                      "arbre",
                                       style: TextStyle(
                                         color: Colors.black, // Customize text color as needed
                                         fontSize: 16, // Customize text size as needed
@@ -425,7 +426,7 @@ class _SecondPageState extends State<Frpg8> {
                                                     this.context,
                                                     MaterialPageRoute(
                                                         builder: (context) =>
-                                                            Frpg9()));
+                                                            Sppg3()));
                                               },
                                               style: ElevatedButton.styleFrom(
                                                 padding: const EdgeInsets.all(15.0),

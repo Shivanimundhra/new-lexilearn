@@ -25,28 +25,10 @@ class _SecondPageState1 extends State<FrPg1> {
   final TextEditingController textEditingController = TextEditingController();
 
   speak() async {
-    await flutterTts.setLanguage("en-US");
+    await flutterTts.setLanguage("fr-be");
     await flutterTts.setPitch(1);
-    await flutterTts.speak("Car");
+    await flutterTts.speak("voiture");
   }
-
-  // speak_one() async {
-  //   await flutterTts.setLanguage("en-US");
-  //   await flutterTts.setPitch(1);
-  //   await flutterTts.speak("This");
-  // }
-  //
-  // speak_two() async {
-  //   await flutterTts.setLanguage("en-US");
-  //   await flutterTts.setPitch(1);
-  //   await flutterTts.speak("is a");
-  // }
-  //
-  // speak_three() async {
-  //   await flutterTts.setLanguage("en-US");
-  //   await flutterTts.setPitch(1);
-  //   await flutterTts.speak("Apple");
-  // }
 
   Color boxcolor = Colors.white;
   Color boxcolor1 = Colors.white;
@@ -141,50 +123,16 @@ class _SecondPageState1 extends State<FrPg1> {
                         const SizedBox(
                           width: 20,
                         ),
-                        // TextButton(
-                        //   onPressed: () {
-                        //     //speak_one();
-                        //   },
-                        //   child: const Tooltip(
-                        //     message: 'यह',
-                        //     triggerMode: TooltipTriggerMode.longPress,
-                        //     child: Text(
-                        //       "This",
-                        //       style: TextStyle(
-                        //           fontSize: 25.0,
-                        //           fontWeight: FontWeight.bold,
-                        //           color: Colors.black),
-                        //     ),
-                        //   ),
-                        // ),
-                        // const Text("This",
-                        //     style: TextStyle(
-                        //         fontSize: 25.0, fontWeight: FontWeight.bold))),
-                        // TextButton(
-                        //   onPressed: () {
-                        //     //speak_two();
-                        //   },
-                        //   child: const Tooltip(
-                        //     message: 'एक',
-                        //     triggerMode: TooltipTriggerMode.longPress,
-                        //     child: Text(
-                        //       "Is a",
-                        //       style: TextStyle(
-                        //           fontSize: 25.0,
-                        //           fontWeight: FontWeight.bold,
-                        //           color: Colors.black),
-                        //     ),
-                        //   ),
-                        // ),
+
                         TextButton(
                           onPressed: () {
                             speak();
                           },
                           child: const Tooltip(
-                            message: 'कार',
+                            message: 'Car',
                             triggerMode: TooltipTriggerMode.longPress,
                             child: Text(
-                              "Car",
+                              "voiture",
                               style: TextStyle(
                                   fontSize: 25.0,
                                   fontWeight: FontWeight.bold,
@@ -234,7 +182,7 @@ class _SecondPageState1 extends State<FrPg1> {
                                 ),
                                 SizedBox(height: 10), // Added SizedBox for spacing
                                 Text(
-                                  "fille",
+                                  "Girl",
                                   style: TextStyle(
                                     color: Colors.black, // Customize text color as needed
                                     fontSize: 16, // Customize text size as needed
@@ -245,11 +193,6 @@ class _SecondPageState1 extends State<FrPg1> {
                             ),
                           ),
                         ),
-
-
-
-
-
                         const SizedBox(
                           width: 20.0,
                         ),
@@ -281,7 +224,7 @@ class _SecondPageState1 extends State<FrPg1> {
                                 ),
                                 SizedBox(height: 10), // Added SizedBox for spacing
                                 Text(
-                                  "garçon",
+                                  "Boy",
                                   style: TextStyle(
                                     color: Colors.black, // Customize text color as needed
                                     fontSize: 16, // Customize text size as needed
@@ -332,7 +275,7 @@ class _SecondPageState1 extends State<FrPg1> {
                                     ),
                                     SizedBox(height: 10), // Added SizedBox for spacing
                                     Text(
-                                      "voiture",
+                                      "Car",
                                       style: TextStyle(
                                         color: Colors.black, // Customize text color as needed
                                         fontSize: 16, // Customize text size as needed
@@ -374,7 +317,7 @@ class _SecondPageState1 extends State<FrPg1> {
                                     ),
                                     SizedBox(height: 10), // Added SizedBox for spacing
                                     Text(
-                                      "arbre",
+                                      "Tree",
                                       style: TextStyle(
                                         color: Colors.black, // Customize text color as needed
                                         fontSize: 16, // Customize text size as needed

@@ -27,25 +27,25 @@ class _four_activityState extends State<Frpg6> {
   final SpeechToText speechtotext = SpeechToText();
   var islisting = false;
   var texttospech="click on mic to test";
-  var text="your car";
+  var text="ta voiture";
   var ans;
 
   speak() async {
-    await flutterTts.setLanguage("en-US");
+    await flutterTts.setLanguage("fr-be");
     await flutterTts.setPitch(1);
-    await flutterTts.speak("Your car");
+    await flutterTts.speak("ta voiture");
   }
 
   speak_one() async {
-    await flutterTts.setLanguage("en-US");
+    await flutterTts.setLanguage("fr-be");
     await flutterTts.setPitch(1);
-    await flutterTts.speak("your");
+    await flutterTts.speak("ta");
   }
 
   speak_two() async {
-    await flutterTts.setLanguage("en-US");
+    await flutterTts.setLanguage("fr-be");
     await flutterTts.setPitch(1);
-    await flutterTts.speak("Car");
+    await flutterTts.speak("voiture");
   }
 
   // speak_three() async {
@@ -132,7 +132,7 @@ class _four_activityState extends State<Frpg6> {
                   Container(
                     margin: EdgeInsets.only(right: 150),
                     child: const Text(
-                      "सही उच्चारण करे",
+                      "Pronounce correctly",
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 25.0,
@@ -165,10 +165,10 @@ class _four_activityState extends State<Frpg6> {
                               speak_one();
                             },
                             child: const Tooltip(
-                              message: 'उसकी',
+                              message: 'Your',
                               triggerMode: TooltipTriggerMode.longPress,
                               child: Text(
-                                "Your",
+                                "ta",
                                 style: TextStyle(
                                     fontSize: 25.0,
                                     fontWeight: FontWeight.bold,
@@ -184,10 +184,10 @@ class _four_activityState extends State<Frpg6> {
                               speak_two();
                             },
                             child: const Tooltip(
-                              message: 'गाड़ी',
+                              message: 'Car',
                               triggerMode: TooltipTriggerMode.longPress,
                               child: Text(
-                                "Car",
+                                "voiture",
                                 style: TextStyle(
                                     fontSize: 25.0,
                                     fontWeight: FontWeight.bold,

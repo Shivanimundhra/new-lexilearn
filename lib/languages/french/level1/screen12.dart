@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
+import 'package:lexilearn/languages/french/level1/screen13.dart';
 import 'package:lexilearn/src/activity/session1/screenfive6.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
@@ -22,15 +23,15 @@ class _five_activityState extends State<Frpg12> {
   final TextEditingController textEditingController = TextEditingController();
 
   speak() async {
-    await flutterTts.setLanguage("en-US");
+    await flutterTts.setLanguage("fr-be");
     await flutterTts.setPitch(1);
-    await flutterTts.speak("Car");
+    await flutterTts.speak("Voiture");
   }
 
   speak_one() async {
     await flutterTts.setLanguage("en-US");
     await flutterTts.setPitch(1);
-    await flutterTts.speak("car");
+    await flutterTts.speak("Voiture");
   }
 
   speak_two() async {
@@ -319,7 +320,7 @@ class _five_activityState extends State<Frpg12> {
                                                     this.context,
                                                     MaterialPageRoute(
                                                         builder: (context) =>
-                                                            five6()));
+                                                            Frpg13()));
                                               },
                                               style: ElevatedButton.styleFrom(
                                                 padding: const EdgeInsets.all(15.0),

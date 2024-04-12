@@ -2,11 +2,9 @@ import 'dart:collection';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
+import 'package:lexilearn/languages/french/level1/screen1.dart';
 import 'package:lexilearn/languages/french/level1/screen6.dart';
-import 'package:lexilearn/languages/french/level1/screen8.dart';
 import 'package:lexilearn/src/activity/level1/secand_activity.dart';
-import 'package:lexilearn/src/activity/session1/screen1.dart';
-import 'package:lexilearn/src/activity/session1/screen2.dart';
 import 'package:lexilearn/src/activity/session1/screenthird9.dart';
 import 'package:lexilearn/src/home/home.dart';
 import 'package:percent_indicator/percent_indicator.dart';
@@ -16,23 +14,23 @@ import 'package:flutter_tts/flutter_tts.dart';
 //import '../profile/profile.dart';
 
 
-class Frpg7 extends StatefulWidget {
-  const Frpg7({super.key});
+class Sppg5 extends StatefulWidget {
+  const Sppg5({super.key});
 
   @override
-  State<Frpg7> createState() => _SixPageState();
+  State<Sppg5> createState() => _SixPageState();
 }
 
 double _initial = 0.0;
 
-class _SixPageState extends State<Frpg7> {
+class _SixPageState extends State<Sppg5> {
   final FlutterTts flutterTts = FlutterTts();
   final TextEditingController textEditingController = TextEditingController();
 
   speak_Apple() async {
-    await flutterTts.setLanguage("fr-be");
+    await flutterTts.setLanguage("en-US");
     await flutterTts.setPitch(1);
-    await flutterTts.speak("Grande");
+    await flutterTts.speak("Your car");
   }
 
   // speak_one() async {
@@ -122,10 +120,10 @@ class _SixPageState extends State<Frpg7> {
                   Container(
                     margin: EdgeInsets.only(right: 150),
                     child: const Text(
-                      "Choose the correct word",
+                      "सही अनुवाद चुनेंं",
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 15.0,
+                          fontSize: 25.0,
                           fontStyle: FontStyle.normal),
                     ),
                   ),
@@ -151,17 +149,13 @@ class _SixPageState extends State<Frpg7> {
                             onPressed: () {
                               //speak_Apple();
                             },
-                            child: const Tooltip(
-                              message: 'Big',
-                              triggerMode: TooltipTriggerMode.longPress,
                             child: Text(
-                              "Grande",
+                              "Your Car",
                               style: TextStyle(
                                   fontSize: 25.0,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black),
                             ),
-                          ),
                           ),
                         ],
                       ),
@@ -192,7 +186,7 @@ class _SixPageState extends State<Frpg7> {
                           ),
                           child: Center(
                               child: Text(
-                                "Car",
+                                "आपकी गाड़ी",
                                 style: TextStyle(
                                     fontSize: 20.0, fontWeight: FontWeight.bold),
                               )),
@@ -220,7 +214,7 @@ class _SixPageState extends State<Frpg7> {
                           ),
                           child: Center(
                               child: Text(
-                                "Big",
+                                "उसकी गाड़ी",
                                 style: TextStyle(
                                     fontSize: 20.0, fontWeight: FontWeight.bold),
                               )),
@@ -250,7 +244,7 @@ class _SixPageState extends State<Frpg7> {
                               ),
                               child: Center(
                                   child: Text(
-                                    "My",
+                                    "मेरी गाड़ी",
                                     style: TextStyle(
                                         fontSize: 20.0, fontWeight: FontWeight.bold),
                                   )),
@@ -278,7 +272,7 @@ class _SixPageState extends State<Frpg7> {
                               ),
                               child: Center(
                                   child: Text(
-                                    "Small",
+                                    "वह कार ",
                                     style: TextStyle(
                                         fontSize: 20.0, fontWeight: FontWeight.bold),
                                   )),
@@ -298,7 +292,7 @@ class _SixPageState extends State<Frpg7> {
                             width: size.width * 0.9,
                             child: ElevatedButton(
                               onPressed: () {
-                                if (_initial != 1 && ans == 1) {
+                                if (_initial != 1 && ans == 0) {
                                   setState(() {
                                     _initial = _initial + 0.2;
                                   });
@@ -355,7 +349,7 @@ class _SixPageState extends State<Frpg7> {
                                                           this.context,
                                                           MaterialPageRoute(
                                                               builder: (context) =>
-                                                                  Frpg8()));
+                                                                  Frpg6()));
                                                     },
                                                     style: ElevatedButton.styleFrom(
                                                       padding: const EdgeInsets.all(15.0),
@@ -376,7 +370,7 @@ class _SixPageState extends State<Frpg7> {
                                       //color:Colors.white60,
                                     ),
                                   );
-                                } else if (_initial == 1 || ans != 1) {
+                                } else if (_initial == 1 || ans != 0) {
                                   setState(() {
                                     _initial = 0.0;
                                   });
@@ -452,7 +446,7 @@ class _SixPageState extends State<Frpg7> {
                                                   this.context,
                                                   MaterialPageRoute(
                                                     builder: (context) =>
-                                                    const Frpg6(),
+                                                    const Sppg5(),
                                                   ),
                                                 );
                                               },

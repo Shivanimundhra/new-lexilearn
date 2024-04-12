@@ -30,9 +30,9 @@ class _SixPageState extends State<Frpg11> {
   final TextEditingController textEditingController = TextEditingController();
 
   speak_Apple() async {
-    await flutterTts.setLanguage("en-US");
+    await flutterTts.setLanguage("fr-be");
     await flutterTts.setPitch(1);
-    await flutterTts.speak("My house is big");
+    await flutterTts.speak("Ma maison est grande");
   }
 
   // speak_one() async {
@@ -122,7 +122,7 @@ class _SixPageState extends State<Frpg11> {
                   Container(
                     margin: EdgeInsets.only(right: 150),
                     child: const Text(
-                      "सही अनुवाद चुनेंं",
+                      "Choose the correct translation4",
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 25.0,
@@ -151,13 +151,17 @@ class _SixPageState extends State<Frpg11> {
                             onPressed: () {
                               //speak_Apple();
                             },
+                            child: const Tooltip(
+                              message: 'My house is big',
+                              triggerMode: TooltipTriggerMode.longPress,
                             child: Text(
-                              "My house is big",
+                              "Ma maison est grande",
                               style: TextStyle(
-                                  fontSize: 25.0,
+                                  fontSize: 22.0,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black),
                             ),
+                          ),
                           ),
                         ],
                       ),
@@ -188,7 +192,7 @@ class _SixPageState extends State<Frpg11> {
                           ),
                           child: Center(
                               child: Text(
-                                "मेरी कार बड़ी है",
+                                "My car is big",
                                 style: TextStyle(
                                     fontSize: 20.0, fontWeight: FontWeight.bold),
                               )),
@@ -216,7 +220,7 @@ class _SixPageState extends State<Frpg11> {
                           ),
                           child: Center(
                               child: Text(
-                                "यह पेड़ बहुत बड़ा है",
+                                "This tree is mine",
                                 style: TextStyle(
                                     fontSize: 20.0, fontWeight: FontWeight.bold),
                               )),
@@ -246,7 +250,7 @@ class _SixPageState extends State<Frpg11> {
                               ),
                               child: Center(
                                   child: Text(
-                                    "मेरा घर बड़ा है",
+                                    "My house is big",
                                     style: TextStyle(
                                         fontSize: 20.0, fontWeight: FontWeight.bold),
                                   )),
@@ -274,7 +278,7 @@ class _SixPageState extends State<Frpg11> {
                               ),
                               child: Center(
                                   child: Text(
-                                    "यह मेरा घर है",
+                                    "This house is mine3",
                                     style: TextStyle(
                                         fontSize: 20.0, fontWeight: FontWeight.bold),
                                   )),

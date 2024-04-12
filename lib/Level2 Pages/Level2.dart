@@ -7,19 +7,21 @@ import 'package:lexilearn/src/activity/level1/secand_activity.dart';
 import 'package:lexilearn/src/activity/session1/screenthird8.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
-import '../../home/home.dart';
-import 'one_activity.dart';
+import '../src/home/home.dart';
+import 'level2-2.dart';
 
-class T_active extends StatefulWidget {
-  const T_active({super.key});
+
+
+class Eng2p1 extends StatefulWidget {
+  const Eng2p1({super.key});
 
   @override
-  State<T_active> createState() => _T_activeState();
+  State<Eng2p1> createState() => _T_activeState();
 }
 
 double _initial = 0.4;
 
-class _T_activeState extends State<T_active> {
+class _T_activeState extends State<Eng2p1> {
   final FlutterTts flutterTts = FlutterTts();
   final TextEditingController textEditingController = TextEditingController();
 
@@ -127,6 +129,7 @@ class _T_activeState extends State<T_active> {
                         Navigator.push(
                             this.context,
                             MaterialPageRoute(
+
                                 builder: (context) => const Home()));
                       },
                       icon: const Icon(
@@ -241,7 +244,7 @@ class _T_activeState extends State<T_active> {
                           boxcolor5 = Colors.grey.shade50;
                           ans=1;
 
-                        //  text=Text("is a") as String;
+                          //  text=Text("is a") as String;
                         });
                         speak_two();
                       },
@@ -413,10 +416,10 @@ class _T_activeState extends State<T_active> {
                             ),
                             child: Center(
                                 child: Text(
-                              "It ",
-                              style: TextStyle(
-                                  fontSize: 20.0, fontWeight: FontWeight.bold),
-                            )),
+                                  "It ",
+                                  style: TextStyle(
+                                      fontSize: 20.0, fontWeight: FontWeight.bold),
+                                )),
                           ),
                         ),
                       ],
@@ -491,7 +494,7 @@ class _T_activeState extends State<T_active> {
                                                 this.context,
                                                 MaterialPageRoute(
                                                     builder: (context) =>
-                                                        page8()));
+                                                        En2p2()));
                                           },
                                           style: ElevatedButton.styleFrom(
                                             padding: const EdgeInsets.all(15.0),
@@ -589,12 +592,12 @@ class _T_activeState extends State<T_active> {
                                         this.context,
                                         MaterialPageRoute(
                                           builder: (context) =>
-                                              const T_active(),
+                                          const Eng2p1(),
                                         ),
                                       );
                                     },
                                     child: const Text(
-                                      "Retray",
+                                      "Retry",
                                       style: TextStyle(
                                           fontSize: 20.0, color: Colors.red),
                                     ))

@@ -26,28 +26,10 @@ class _SecondPageState1 extends State<Frpg2> {
   final TextEditingController textEditingController = TextEditingController();
 
   speak() async {
-    await flutterTts.setLanguage("en-US");
+    await flutterTts.setLanguage("fr-be");
     await flutterTts.setPitch(1);
-    await flutterTts.speak("House");
+    await flutterTts.speak("Maison");
   }
-
-  // speak_one() async {
-  //   await flutterTts.setLanguage("en-US");
-  //   await flutterTts.setPitch(1);
-  //   await flutterTts.speak("This");
-  // }
-  //
-  // speak_two() async {
-  //   await flutterTts.setLanguage("en-US");
-  //   await flutterTts.setPitch(1);
-  //   await flutterTts.speak("is a");
-  // }
-  //
-  // speak_three() async {
-  //   await flutterTts.setLanguage("en-US");
-  //   await flutterTts.setPitch(1);
-  //   await flutterTts.speak("Apple");
-  // }
 
   Color boxcolor0 = Colors.white;
   Color boxcolor1 = Colors.white;
@@ -148,10 +130,10 @@ class _SecondPageState1 extends State<Frpg2> {
                             speak();
                           },
                           child: const Tooltip(
-                            message: 'घर',
+                            message: 'House',
                             triggerMode: TooltipTriggerMode.longPress,
                             child: Text(
-                              "House",
+                              "Maison",
                               style: TextStyle(
                                   fontSize: 25.0,
                                   fontWeight: FontWeight.bold,
@@ -201,7 +183,7 @@ class _SecondPageState1 extends State<Frpg2> {
                                 ),
                                 SizedBox(height: 10), // Added SizedBox for spacing
                                 Text(
-                                  "maison",
+                                  "House",
                                   style: TextStyle(
                                     color: Colors.black, // Customize text color as needed
                                     fontSize: 16, // Customize text size as needed
@@ -248,7 +230,7 @@ class _SecondPageState1 extends State<Frpg2> {
                                 ),
                                 SizedBox(height: 10), // Added SizedBox for spacing
                                 Text(
-                                  "garçon",
+                                  "Boy",
                                   style: TextStyle(
                                     color: Colors.black, // Customize text color as needed
                                     fontSize: 16, // Customize text size as needed

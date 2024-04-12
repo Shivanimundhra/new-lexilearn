@@ -27,9 +27,9 @@ class _SixPageState extends State<Frpg4> {
   final TextEditingController textEditingController = TextEditingController();
 
   speak_Apple() async {
-    await flutterTts.setLanguage("Hn-IN");
+    await flutterTts.setLanguage("fr-be");
     await flutterTts.setPitch(1);
-    await flutterTts.speak("मेरा");
+    await flutterTts.speak("Ma");
   }
 
   // speak_one() async {
@@ -148,13 +148,17 @@ class _SixPageState extends State<Frpg4> {
                             onPressed: () {
                               //speak_Apple();
                             },
+                            child: const Tooltip(
+                              message: 'My',
+                              triggerMode: TooltipTriggerMode.longPress,
                             child: Text(
-                              "मेरा",
+                              "Ma",
                               style: TextStyle(
                                   fontSize: 25.0,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black),
                             ),
+                          ),
                           ),
                         ],
                       ),

@@ -1,9 +1,8 @@
 import 'dart:collection';
-
+import 'package:lexilearn/languages/french/level1/screen2.dart';
+import 'package:lexilearn/src/home/home3.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
-import 'package:lexilearn/languages/french/level1/screen7.dart';
-import 'package:lexilearn/languages/french/level1/screen9.dart';
 import 'package:lexilearn/src/activity/level1/secand_activity.dart';
 import 'package:lexilearn/src/activity/session1/screen2.dart';
 import 'package:lexilearn/src/home/home.dart';
@@ -11,25 +10,24 @@ import 'package:percent_indicator/percent_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 
-// import '../level1/six.dart';
 
-class Frpg8 extends StatefulWidget {
-  const Frpg8({super.key});
+class SpPg1 extends StatefulWidget {
+  const SpPg1({super.key});
 
   @override
-  State<Frpg8> createState() => _SecondPageState();
+  State<SpPg1> createState() => _SecondPageState1();
 }
 
 double _initial = 0.0;
 
-class _SecondPageState extends State<Frpg8> {
+class _SecondPageState1 extends State<SpPg1> {
   final FlutterTts flutterTts = FlutterTts();
   final TextEditingController textEditingController = TextEditingController();
 
   speak() async {
-    await flutterTts.setLanguage("fr-be");
+    await flutterTts.setLanguage("en-US");
     await flutterTts.setPitch(1);
-    await flutterTts.speak("Maison");
+    await flutterTts.speak("Car");
   }
 
   // speak_one() async {
@@ -50,7 +48,7 @@ class _SecondPageState extends State<Frpg8> {
   //   await flutterTts.speak("Apple");
   // }
 
-  Color boxcolor0 = Colors.white;
+  Color boxcolor = Colors.white;
   Color boxcolor1 = Colors.white;
   Color boxcolor2 = Colors.white;
   Color boxcolor3 = Colors.white;
@@ -88,7 +86,7 @@ class _SecondPageState extends State<Frpg8> {
                             Navigator.push(
                                 this.context,
                                 MaterialPageRoute(
-                                    builder: (context) => const Home()));
+                                    builder: (context) => const Frpg2()));
                           },
                           icon: const Icon(
                             Icons.arrow_back,
@@ -103,7 +101,7 @@ class _SecondPageState extends State<Frpg8> {
                           width: 15,
                         ),
                         const Text(
-                          "2/5",
+                          "1/5",
                           style:
                           TextStyle(fontSize: 20.0, fontWeight: FontWeight.w700),
                         )
@@ -118,10 +116,10 @@ class _SecondPageState extends State<Frpg8> {
                 Container(
                   margin: EdgeInsets.only(right: 150),
                   child: const Text(
-                    "Choose the correct picture",
+                    "Choose the picture",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 25.0,
+                        fontSize: 22.0,
                         fontStyle: FontStyle.normal),
                   ),
                 ),
@@ -143,16 +141,50 @@ class _SecondPageState extends State<Frpg8> {
                         const SizedBox(
                           width: 20,
                         ),
-
+                        // TextButton(
+                        //   onPressed: () {
+                        //     //speak_one();
+                        //   },
+                        //   child: const Tooltip(
+                        //     message: 'यह',
+                        //     triggerMode: TooltipTriggerMode.longPress,
+                        //     child: Text(
+                        //       "This",
+                        //       style: TextStyle(
+                        //           fontSize: 25.0,
+                        //           fontWeight: FontWeight.bold,
+                        //           color: Colors.black),
+                        //     ),
+                        //   ),
+                        // ),
+                        // const Text("This",
+                        //     style: TextStyle(
+                        //         fontSize: 25.0, fontWeight: FontWeight.bold))),
+                        // TextButton(
+                        //   onPressed: () {
+                        //     //speak_two();
+                        //   },
+                        //   child: const Tooltip(
+                        //     message: 'एक',
+                        //     triggerMode: TooltipTriggerMode.longPress,
+                        //     child: Text(
+                        //       "Is a",
+                        //       style: TextStyle(
+                        //           fontSize: 25.0,
+                        //           fontWeight: FontWeight.bold,
+                        //           color: Colors.black),
+                        //     ),
+                        //   ),
+                        // ),
                         TextButton(
                           onPressed: () {
                             speak();
                           },
                           child: const Tooltip(
-                            message: 'House',
+                            message: 'कार',
                             triggerMode: TooltipTriggerMode.longPress,
                             child: Text(
-                              "Maison",
+                              "Car",
                               style: TextStyle(
                                   fontSize: 25.0,
                                   fontWeight: FontWeight.bold,
@@ -177,11 +209,11 @@ class _SecondPageState extends State<Frpg8> {
                         GestureDetector(
                           onTap: () {
                             setState(() {
-                              boxcolor0 = Colors.green.shade400;
+                              boxcolor = Colors.green.shade400;
                               boxcolor1 = Colors.white;
                               boxcolor2 = Colors.white;
                               boxcolor3 = Colors.white;
-                              ans = 0;
+                              ans = 1;
                             });
                           },
                           child: Container(
@@ -193,16 +225,16 @@ class _SecondPageState extends State<Frpg8> {
                                 Container(
                                   height: 150,
                                   decoration: BoxDecoration(
-                                    color: boxcolor0,
+                                    color: boxcolor,
                                     borderRadius: BorderRadius.circular(40.0),
                                   ),
                                   child: Image(
-                                    image: AssetImage("assets/activity_img/house.png"),
+                                    image: AssetImage("assets/activity_img/Girl.png"),
                                   ),
                                 ),
                                 SizedBox(height: 10), // Added SizedBox for spacing
                                 Text(
-                                  "House",
+                                  "fille",
                                   style: TextStyle(
                                     color: Colors.black, // Customize text color as needed
                                     fontSize: 16, // Customize text size as needed
@@ -224,7 +256,7 @@ class _SecondPageState extends State<Frpg8> {
                         GestureDetector(
                           onTap: () {
                             setState(() {
-                              boxcolor0 = Colors.white;
+                              boxcolor = Colors.white;
                               boxcolor1 = Colors.green.shade400;
                               boxcolor2 = Colors.white;
                               boxcolor3 = Colors.white;
@@ -249,7 +281,7 @@ class _SecondPageState extends State<Frpg8> {
                                 ),
                                 SizedBox(height: 10), // Added SizedBox for spacing
                                 Text(
-                                  "Boy",
+                                  "garçon",
                                   style: TextStyle(
                                     color: Colors.black, // Customize text color as needed
                                     fontSize: 16, // Customize text size as needed
@@ -275,7 +307,7 @@ class _SecondPageState extends State<Frpg8> {
                             GestureDetector(
                               onTap: () {
                                 setState(() {
-                                  boxcolor0 = Colors.white;
+                                  boxcolor = Colors.white;
                                   boxcolor1 = Colors.white;
                                   boxcolor2 =Colors.green.shade400;
                                   boxcolor3 = Colors.white;
@@ -300,7 +332,7 @@ class _SecondPageState extends State<Frpg8> {
                                     ),
                                     SizedBox(height: 10), // Added SizedBox for spacing
                                     Text(
-                                      "car",
+                                      "voiture",
                                       style: TextStyle(
                                         color: Colors.black, // Customize text color as needed
                                         fontSize: 16, // Customize text size as needed
@@ -317,11 +349,11 @@ class _SecondPageState extends State<Frpg8> {
                             GestureDetector(
                               onTap: () {
                                 setState(() {
-                                  boxcolor0 = Colors.white;
+                                  boxcolor = Colors.white;
                                   boxcolor1 = Colors.white;
                                   boxcolor2 = Colors.white;
                                   boxcolor3 = Colors.green.shade400;
-                                  ans = 1;
+                                  ans =1;
                                 });
                               },
                               child: Container(
@@ -342,7 +374,7 @@ class _SecondPageState extends State<Frpg8> {
                                     ),
                                     SizedBox(height: 10), // Added SizedBox for spacing
                                     Text(
-                                      "Tree",
+                                      "arbre",
                                       style: TextStyle(
                                         color: Colors.black, // Customize text color as needed
                                         fontSize: 16, // Customize text size as needed
@@ -368,7 +400,7 @@ class _SecondPageState extends State<Frpg8> {
                       width: size.width * 0.9,
                       child: ElevatedButton(
                         onPressed: () {
-                          if (_initial != 1 && ans == 0) {
+                          if (_initial != 1 && ans == 2) {
                             setState(() {
                               _initial = _initial + 0.2;
                             });
@@ -425,7 +457,7 @@ class _SecondPageState extends State<Frpg8> {
                                                     this.context,
                                                     MaterialPageRoute(
                                                         builder: (context) =>
-                                                            Frpg9()));
+                                                            Frpg2()));
                                               },
                                               style: ElevatedButton.styleFrom(
                                                 padding: const EdgeInsets.all(15.0),
@@ -522,7 +554,7 @@ class _SecondPageState extends State<Frpg8> {
                                             this.context,
                                             MaterialPageRoute(
                                               builder: (context) =>
-                                              const page1(),
+                                              const SpPg1(),
                                             ),
                                           );
                                         },
@@ -554,6 +586,12 @@ class _SecondPageState extends State<Frpg8> {
               ],
             ),
           )
+        //Center(
+        //   child: Text('Hello',style: TextStyle(
+        //     color: Colors.amber,
+        //     fontSize: 45,
+        //   ),),
+        // ),
       ),
     );
   }

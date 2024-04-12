@@ -27,9 +27,9 @@ class _SixPageState extends State<Frpg3> {
   final TextEditingController textEditingController = TextEditingController();
 
   speak_Apple() async {
-    await flutterTts.setLanguage("en-US");
+    await flutterTts.setLanguage("fr-be");
     await flutterTts.setPitch(1);
-    await flutterTts.speak("House");
+    await flutterTts.speak("Maison");
   }
 
   Color boxcolor = Colors.white60;
@@ -104,7 +104,7 @@ class _SixPageState extends State<Frpg3> {
                       "Select the correct option",
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 22.0,
+                          fontSize: 18.0,
                           fontStyle: FontStyle.normal),
                     ),
                   ),
@@ -130,15 +130,20 @@ class _SixPageState extends State<Frpg3> {
                             onPressed: () {
                               //speak_Apple();
                             },
+                            child: const Tooltip(
+                              message: "House",
+                              triggerMode: TooltipTriggerMode.longPress,
                             child: Text(
-                              "House",
+                              "Maison",
                               style: TextStyle(
                                   fontSize: 25.0,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black),
                             ),
                           ),
+                          ),
                         ],
+
                       ),
                     ],
                   ),
@@ -167,7 +172,7 @@ class _SixPageState extends State<Frpg3> {
                           ),
                           child: Center(
                               child: Text(
-                                "garçon",
+                                "Boy",
                                 style: TextStyle(
                                     fontSize: 20.0, fontWeight: FontWeight.bold),
                               )),
@@ -195,7 +200,7 @@ class _SixPageState extends State<Frpg3> {
                           ),
                           child: Center(
                               child: Text(
-                                "maison",
+                                "House",
                                 style: TextStyle(
                                     fontSize: 20.0, fontWeight: FontWeight.bold),
                               )),
@@ -225,7 +230,7 @@ class _SixPageState extends State<Frpg3> {
                               ),
                               child: Center(
                                   child: Text(
-                                    "pomme",
+                                    "apple",
                                     style: TextStyle(
                                         fontSize: 20.0, fontWeight: FontWeight.bold),
                                   )),
@@ -253,7 +258,7 @@ class _SixPageState extends State<Frpg3> {
                               ),
                               child: Center(
                                   child: Text(
-                                    "arbre",
+                                    "Tree",
                                     style: TextStyle(
                                         fontSize: 20.0, fontWeight: FontWeight.bold),
                                   )),

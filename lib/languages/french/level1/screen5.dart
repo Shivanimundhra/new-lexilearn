@@ -28,9 +28,9 @@ class _SixPageState extends State<Frpg5> {
   final TextEditingController textEditingController = TextEditingController();
 
   speak_Apple() async {
-    await flutterTts.setLanguage("en-US");
+    await flutterTts.setLanguage("fr-be");
     await flutterTts.setPitch(1);
-    await flutterTts.speak("Your car");
+    await flutterTts.speak("Ta voiture");
   }
 
   // speak_one() async {
@@ -149,13 +149,17 @@ class _SixPageState extends State<Frpg5> {
                             onPressed: () {
                               //speak_Apple();
                             },
+                            child: const Tooltip(
+                              message: 'Your car',
+                              triggerMode: TooltipTriggerMode.longPress,
                             child: Text(
-                              "Your Car",
+                              "Ta voiture",
                               style: TextStyle(
                                   fontSize: 25.0,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black),
                             ),
+                          ),
                           ),
                         ],
                       ),
@@ -186,7 +190,7 @@ class _SixPageState extends State<Frpg5> {
                           ),
                           child: Center(
                               child: Text(
-                                "आपकी गाड़ी",
+                                "Your car",
                                 style: TextStyle(
                                     fontSize: 20.0, fontWeight: FontWeight.bold),
                               )),
@@ -214,7 +218,7 @@ class _SixPageState extends State<Frpg5> {
                           ),
                           child: Center(
                               child: Text(
-                                "उसकी गाड़ी",
+                                "His car",
                                 style: TextStyle(
                                     fontSize: 20.0, fontWeight: FontWeight.bold),
                               )),
@@ -244,7 +248,7 @@ class _SixPageState extends State<Frpg5> {
                               ),
                               child: Center(
                                   child: Text(
-                                    "मेरी गाड़ी",
+                                    "My car",
                                     style: TextStyle(
                                         fontSize: 20.0, fontWeight: FontWeight.bold),
                                   )),
@@ -272,7 +276,7 @@ class _SixPageState extends State<Frpg5> {
                               ),
                               child: Center(
                                   child: Text(
-                                    "वह कार ",
+                                    "That car",
                                     style: TextStyle(
                                         fontSize: 20.0, fontWeight: FontWeight.bold),
                                   )),

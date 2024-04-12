@@ -25,9 +25,9 @@ class _SecondPageState extends State<Frpg9> {
   final TextEditingController textEditingController = TextEditingController();
 
   speak() async {
-    await flutterTts.setLanguage("en-US");
+    await flutterTts.setLanguage("fr-be");
     await flutterTts.setPitch(1);
-    await flutterTts.speak("Tree");
+    await flutterTts.speak("Arbre");
   }
 
   Color boxcolor = Colors.white;
@@ -163,10 +163,10 @@ class _SecondPageState extends State<Frpg9> {
                             speak();
                           },
                           child: const Tooltip(
-                            message: 'पेड़',
+                            message: 'Tree',
                             triggerMode: TooltipTriggerMode.longPress,
                             child: Text(
-                              "Tree",
+                              "Arbre",
                               style: TextStyle(
                                   fontSize: 25.0,
                                   fontWeight: FontWeight.bold,
@@ -216,7 +216,7 @@ class _SecondPageState extends State<Frpg9> {
                                 ),
                                 SizedBox(height: 10), // Added SizedBox for spacing
                                 Text(
-                                  "लड़की",
+                                  "Girl",
                                   style: TextStyle(
                                     color: Colors.black, // Customize text color as needed
                                     fontSize: 16, // Customize text size as needed
@@ -263,7 +263,7 @@ class _SecondPageState extends State<Frpg9> {
                                 ),
                                 SizedBox(height: 10), // Added SizedBox for spacing
                                 Text(
-                                  "लड़का",
+                                  "Boy",
                                   style: TextStyle(
                                     color: Colors.black, // Customize text color as needed
                                     fontSize: 16, // Customize text size as needed
@@ -314,7 +314,7 @@ class _SecondPageState extends State<Frpg9> {
                                     ),
                                     SizedBox(height: 10), // Added SizedBox for spacing
                                     Text(
-                                      "सेब",
+                                      "Apple",
                                       style: TextStyle(
                                         color: Colors.black, // Customize text color as needed
                                         fontSize: 16, // Customize text size as needed
@@ -356,7 +356,7 @@ class _SecondPageState extends State<Frpg9> {
                                     ),
                                     SizedBox(height: 10), // Added SizedBox for spacing
                                     Text(
-                                      "पेड़",
+                                      "Tree",
                                       style: TextStyle(
                                         color: Colors.black, // Customize text color as needed
                                         fontSize: 16, // Customize text size as needed

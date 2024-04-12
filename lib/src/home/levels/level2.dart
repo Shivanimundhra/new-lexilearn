@@ -143,7 +143,7 @@ class _levelsState extends State<levels> {
             GestureDetector(onTap: () {
               Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const SecondPage()));
+                  MaterialPageRoute(builder: (context) => const SecondPage1()));
             },
                 child: CircleAvatar(
                   radius: 25,

@@ -3,6 +3,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:lexilearn/firebase_options.dart';
+import 'package:lexilearn/languages/french/level1/screen1.dart';
+import 'package:lexilearn/languages/french/level1/screen8.dart';
 import 'package:lexilearn/questions/questions.dart';
 import 'package:lexilearn/src/Login_register/forget_password_phone.dart';
 import 'package:lexilearn/src/Login_register/login.dart';
@@ -34,6 +36,7 @@ import 'package:lexilearn/src/splash_screen/splash.dart';
 import 'package:lexilearn/src/streak/streak.dart';
 
 import 'languages/french/level1/screen3.dart';
+import 'languages/french/level1/screen7.dart';
 
 
 void main() async {
@@ -88,16 +91,19 @@ class _MyAppState extends State<MyApp> {
       //   SixPage(),
       //SevenPage(),
       //   Six3Page(),
-       // Home3()
-      //    T_active(),
+        Home()
+        // T_active(),
        // adminscreen(),
       //Sp_four(),
         //ForgetPasswordScreen(),
       //extra(),
      //  welcome(),
      //   streak()
-      isLogin ? const Home() : const splash(),
-      //  Frpg3()
+     //  isLogin ? const Home() : const splash(),
+      //  Frpg3(),
+      //   FrPg1(),
+        //Frpg8()
+
 
       //splash(),
       // StreamBuilder(stream: FirebaseAuth.instance.authStateChanges(), builder: (context,snapshot){

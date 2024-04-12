@@ -4,6 +4,7 @@ import 'package:lexilearn/src/home/home.dart';
 import 'package:lexilearn/src/home/language.dart';
 //import 'package:lexilearnn/screens/second.dart';
 
+import '../../../LEVELS/Level2.dart';
 import '../../activity/level1/one_activity.dart';
 import '../../streak/streak.dart';
 
@@ -143,7 +144,7 @@ class _levelsState extends State<levels> {
             GestureDetector(onTap: () {
               Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const SecondPage()));
+                  MaterialPageRoute(builder: (context) => const SecondPage1()));
             },
                 child: CircleAvatar(
                   radius: 25,
@@ -196,15 +197,21 @@ class _levelsState extends State<levels> {
               CircleAvatar(
                 backgroundColor: Colors.grey[100],
                 radius: 40,
-              ),
-              CircleAvatar(
-                radius: 25,
-                backgroundColor: Colors.white,
-                child: Image.asset(
-                  'assets/image/home_image/start.jpg',
-                  height: 55,
-                ),
-              )
+              ),GestureDetector(onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Eng2p1()));
+              },
+                  child: CircleAvatar(
+                    radius: 25,
+                    backgroundColor: Colors.white,
+                    child: Center(
+                      child: Image.asset(
+                        'assets/image/home_image/start.jpg',
+                        height: 55,
+                      ),
+                    ),
+                  )),
             ],
           ),
           Stack(
